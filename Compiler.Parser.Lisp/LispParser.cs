@@ -65,11 +65,6 @@ namespace Compiler.Parser.Lisp
                         currentToken.Add(c);
                         break;
                 }
-
-                if (currentNode is null && !char.IsWhiteSpace(c) && !char.IsControl(c))
-                {
-                    throw new Exception("Encountered symbols after detected end of code");
-                }
             }
 
             if (parenthesisCounter != 0)
